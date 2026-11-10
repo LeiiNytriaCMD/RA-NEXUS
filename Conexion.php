@@ -1,7 +1,7 @@
 
 <?php
 class Conexion{
-    private string $host = "127.0.0.1";
+    private string $host = "localhost";
     private string $usuario = "camila";
     private string $password = "123456";
     private string $basedatos = "Aetheria";
@@ -13,8 +13,7 @@ class Conexion{
                 $this->host,
                 $this->usuario,
                 $this->password,
-                $this->basedatos,
-                3306
+                $this->basedatos
             );
 
             if($this->conexion->connect_error){
