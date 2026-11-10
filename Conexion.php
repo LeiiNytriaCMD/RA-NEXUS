@@ -1,11 +1,7 @@
+
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 class Conexion{
-    private string $host = "localhost";
+    private string $host = "127.0.0.1";
     private string $usuario = "camila";
     private string $password = "123456";
     private string $basedatos = "Aetheria";
@@ -17,7 +13,8 @@ class Conexion{
                 $this->host,
                 $this->usuario,
                 $this->password,
-                $this->basedatos
+                $this->basedatos,
+                3306
             );
 
             if($this->conexion->connect_error){
@@ -43,3 +40,4 @@ if($conexion->conectar() != null){
     echo "Error en la conexion con la base de datos";
 }
 ?>
+EOF
